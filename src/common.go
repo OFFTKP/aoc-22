@@ -6,6 +6,7 @@ import (
 	"log"
 	"net/http"
 	"strconv"
+	"strings"
 )
 
 func RFStr(path string) string {
@@ -42,4 +43,25 @@ func GetLines(day int) []string {
 		lines = append(lines, scanner.Text())
 	}
 	return lines
+}
+
+func GetLinesStr(str string) []string {
+	scanner := bufio.NewScanner(strings.NewReader(str))
+	var lines []string
+	for scanner.Scan() {
+		lines = append(lines, scanner.Text())
+	}
+	return lines
+}
+
+func MaxOf(vars ...int) int {
+	max := vars[0]
+
+	for _, i := range vars {
+		if i > max {
+			max = i
+		}
+	}
+
+	return max
 }
