@@ -1,6 +1,7 @@
 package main
 
 import (
+	"common"
 	"fmt"
 	"log"
 	"strconv"
@@ -29,7 +30,7 @@ func (s *Stack) Top() byte {
 }
 
 func main() {
-	lines := GetLines(5)
+	lines := common.GetLines(5)
 	emptyi := 0
 	for i, line := range lines {
 		// Find empty line

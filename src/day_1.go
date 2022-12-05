@@ -1,13 +1,14 @@
 package main
 
 import (
+	"common"
 	"fmt"
 	"sort"
 	"strconv"
 )
 
 func main() {
-	lines := GetLines(1)
+	lines := common.GetLines(1)
 	calories := make([]int, len(lines))
 	index := 0
 	for _, str := range lines {
