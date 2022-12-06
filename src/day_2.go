@@ -1,7 +1,6 @@
 package main
 
 import (
-	"common"
 	"fmt"
 )
 
@@ -42,7 +41,7 @@ func fight2(my byte, enemy int) int {
 }
 
 func main() {
-	lines := common.GetLines(2)
+	lines := GetLines(2)
 	var sum int = 0
 	var sum2 int = 0
 	for _, line := range lines {

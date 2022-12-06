@@ -1,12 +1,11 @@
 package main
 
 import (
-	"common"
 	"fmt"
 )
 
 func main() {
-	lines := common.GetLines(4)
+	lines := GetLines(4)
 	sum := 0
 	sum2 := 0
 	for _, line := range lines {

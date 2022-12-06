@@ -1,7 +1,6 @@
 package main
 
 import (
-	"common"
 	"fmt"
 	"log"
 	"strings"
@@ -18,7 +17,7 @@ func getPrio(c int) int {
 }
 
 func main() {
-	lines := common.GetLines(3)
+	lines := GetLines(3)
 	sum := 0
 	sum2 := 0
 	for _, line := range lines {
@@ -41,7 +40,7 @@ func main() {
 		line1 := lines[i]
 		line2 := lines[i+1]
 		line3 := lines[i+2]
-		max := common.MaxOf(len(line1), len(line2), len(line3))
+		max := MaxOf(len(line1), len(line2), len(line3))
 		m := make(map[int]int, max)
 		for _, c := range line1 {
 			if m[int(c)] == 0 {
