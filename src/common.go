@@ -54,6 +54,26 @@ func GetLinesStr(str string) []string {
 	return lines
 }
 
+func abs(x int) int {
+	return absDiffInt(x, 0)
+}
+
+func sign(x int) int {
+	if x > 0 {
+		return 1
+	} else if x == 0 {
+		return 0
+	}
+	return -1
+}
+
+func absDiffInt(x, y int) int {
+	if x < y {
+		return y - x
+	}
+	return x - y
+}
+
 func MaxOf(vars ...int) int {
 	max := vars[0]
 
